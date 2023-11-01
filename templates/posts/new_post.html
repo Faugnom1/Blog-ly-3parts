@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}New Post {% endblock %}
+
+{% block content %}
+
+<form>
+    <button class="btn btn-outline-primary" 
+    formmethod="GET" 
+    formaction="/users/{{ post.user_id }}">Cancel</button>
+    <button class="btn btn-outline-primary"
+    formmethod="GET"
+    formaction="/posts/{{ post.id  }}">Edit</button>
+    <button class="btn btn-outline-primary"
+    formmethod="POST"
+    formaction="/posts/{{ post.id }}">Delete</button>
+</form>
+
+{% endblock %}
